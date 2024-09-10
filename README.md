@@ -10,9 +10,17 @@
 6. Hierarchical Modeling
 7. Bezier Curves and Surfaces
 8. Z-Buffer Rendering
-9. Lighting and Shading
+   
+   ![cubism](/../main/images/cubism.gif)
 
-   ![cuboid](/../main/images/test9a.ppm)
-   ![X wings](/../main/images/test9b.ppm)
-   ![3D ball](/../main/images/test9d.ppm)
+   ![cuboid](/../main/images/test8a.png)
+   
+10. Lighting and Shading
+
+   ![3D ball](/../main/images/test9d.png)
+
+   ![cuboid](/../main/images/test9a.png)
+   
+   ![X wings](/../main/images/test9b.png)
+   
    ![starfuries](/../main/images/starfuries.png)
