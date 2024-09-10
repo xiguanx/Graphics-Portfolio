@@ -11,3 +11,8 @@
 7. Bezier Curves and Surfaces
 8. Z-Buffer Rendering
 9. Lighting and Shading
+
+   ![cuboid](/../main/images/test9a.ppm)
+   ![X wings](/../main/images/test9b.ppm)
+   ![3D ball](/../main/images/test9d.ppm)
+   ![starfuries](/../main/images/starfuries.png)
