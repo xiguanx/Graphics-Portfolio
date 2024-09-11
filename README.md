@@ -6,10 +6,10 @@
 <p>Lab 1 aimed to set up Unix, C and have an initial understanding of the mechanics of creating, manipulating, and writing images.</p>
 <p>The red color was picked and amplified from the source image on the left. The rest of the colors were turned into grey. The second image shows the effect.</p>
 <p><img src = "/../main/images/geraniums.png" width = 300 />
-<img src = "/../main/images/out.png" width = 300 /></p>
+   <img src = "/../main/images/out.png" width = 300 /></p>
 <p>I merged the source image powerpuff with the background image. </p>
 <p><img src = "/../main/images/powerpuff.png" width = 300 />
-<img src = "/../main/images/composite.png" width = 300 /></p>
+   <img src = "/../main/images/composite.png" width = 300 /></p>
 
 ### 2. Fractals
 <p>Lab 2 aimed to build and use useful data structures -- an Image and a Pixel. The main tasks involved creating an image data structure to represent images, implementing algorithms to generate Mandelbrot and Julia sets, and creating fractal noise functions such as Perlin noise.</p>
@@ -18,32 +18,59 @@
 <p>Julia function created a visualization of the Julia set for the constant c = 0.7454054 + 0.1130063i. The grid of points in the complex plane was centered around (-1.8, -1.8 * 0.75) with a span of 3.6 units. The julia_escape function determined the iteration count for each point, indicating how quickly the sequence diverges or remains bounded. This count was then converted to a grayscale color, resulting in an image that displays the fractal structure of the Julia set. The Julia set demonstrates the complex, self-similar structure characteristic of fractals.</p>
 <em>Julia Set</em>
 <img src = "/../main/images/juliaset.png" width = 500 />
-<p>These are a zoomed-in view and a full view of the Mandelbrot set. The function mandelbrot was used to iterate over a grid of points in the complex plane, centered around (-1.5, -1.5) with a span of 4 units. For each point, the mandelbrot_escape function determined how many iterations it took for the sequence to exceed the escape radius. The iteration count was then mapped to a grayscale color value, where a higher iteration count (indicating points inside the Mandelbrot set) resulted in darker colors. These images captured the characteristic boundary of the Mandelbrot set with intricate fractal details.</p>
+<p>The following two images are a zoomed-in view and a full view of the Mandelbrot set. The function mandelbrot was used to iterate over a grid of points in the complex plane, centered around (-1.5, -1.5) with a span of 4 units. For each point, the mandelbrot_escape function determined how many iterations it took for the sequence to exceed the escape radius. The iteration count was then mapped to a grayscale color value, where a higher iteration count (indicating points inside the Mandelbrot set) resulted in darker colors. These images captured the characteristic boundary of the Mandelbrot set with intricate fractal details.</p>
 <em>Mandelbrot Set</em>
 <img src = "/../main/images/mandelbrot.png" width = 500 />
 <em>Mandelbrot Full Set</em>
 <img src = "/../main/images/mandelbrot-full.png" width = 500 />
 <p>To create perlin noise, I implemented a Perlin noise generator that filled an image with procedural noise. The Perlin noise function was initialized with a shuffled permutation array to ensure randomness. Each pixel in the image was assigned a noise value based on its coordinates, which was then normalized to a range of 0 to 1 and mapped to grayscale colors. This process produced a smooth, cloud-like texture. Perlin noise can be used for various realistic texture effects.</p>
 <em>Perlin Noise</em>
-<img src = "/../main/images/perlin_noise.png" width = 500 />
+<img src = "/../main/images/perlin_noise.png" />
    
-### 4. Graphics Primitives
-5. Scanline Fill
-6. Transformation and Viewing
-7. Hierarchical Modeling
-   
-   ![wings](/../main/images/wings.png)
+### 3. Graphics Primitives
+<p>Lab 4 aimed to build a graphics system. The main tasks involved implementing graphics primitives, including lines, circles, ellipses, and polylines using Bresenham’s algorithms.</p>
+<img src = "/../main/images/test3d.png" />
+<p>Rectangles, a cirle and lines.</p>
+<img src = "/../main/images/test3a.png" width = 500 />
+<p>The image has five random square objects. Each square is initially defined by four lines forming its edges. These lines are stored in a linked list and then repeatedly subdivided into smaller segments, perturbing their midpoints to add randomness. The number of subdivisions and the perturbation factor are specified by user input, with an optional random seed for reproducibility. Each square is drawn in a random color.</p>
+<img src = "/../main/images/test3b.png" height = 500 />
+<p>The sphere was created by calculating the distance of each pixel from the center of the circle and adjusts the color intensity accordingly, creating a shading effect that gives the appearance of a three-dimensional sphere.</p>
+<img src = "/../main/images/3dball.png" width = 500 />
+<p>The dashline was created by alternating between drawing and not drawing segments of the specified length (20 pixels).</p>
+<img src = "/../main/images/dashline.png" width = 500 />
 
-   ![xwings](/../main/images/xwings.png)
+### 4. Scanline Fill
+<p>This image was composed of a square and three irregular polygons. Each polygon was constructed with random vertices. All the shapes were filled using a Scanline fill algorithm. </p>
+<p><img src = "/../main/images/test4a.png" />
+   <img src = "/../main/images/scanline_fill.gif" /></p>
+<p>This image was filled with a Barycentric fill algorithm.</p>
+<img src = "/../main/images/test4b.png" />
+<p>I drew a polygon using a scanline fill algorithm with a gradient color effect. This gradient effect is achieved by linearly interpolating the RGB values of the colors along each scanline, resulting in a smooth transition from the start color to the end color across the polygon.</p>
+<img src = "/../main/images/polygon_gradient.png" width = 500 height = 400/>
+
+### 5. Transformation and Viewing
+<p>The geometric shapes representing a spaceship were transformed into world coordinates using a series of translation, scaling, and rotation matrices. The shapes were then combined into a spaceship and transformed into the screen's view coordinates. The transformed shapes were then rendered onto the image canvas, filled with colors.</p>
+<img src = "/../main/images/test5a.png" width = 500 />
+<p>50 random lines with specific orientations and frequencies were generated within a square area. Each line was rotated around its endpoint based on its orientation and frequency. The transformed lines were then drawn onto an image matrix. The view matrix was updated to translate across the screen, creating a panning effect.</p>
+<img src = "/../main/images/lines.gif" />
+<p>The 3D cube was projected onto a 2D image plane. It initialized a 3D view with a specified viewpoint and sets up a virtual camera using the View3D structure. These polygons were transformed using several View Transformation Matrices (vtm) to project them onto the 2D image plane. </p>
+<img src = "/../main/images/cube.gif" />
+
+### 6. Hierarchical Modeling
+<p>This 2D scene is composed of 3 formation modules. Each formation has an X-wing module. X-wings are composed of wing, engine and body modules. Random points were generated to represent stars in the background.</p>
+<img src = "/../main/images/wings.png" />
+<p>This 3D scene is composed of 3 body modules. Each body has a wings module. The wings module is composed of 4 wing modules. The wing has engine and laser modules. The structures were built using polygons and cylinders.</p>
+<img src = "/../main/images/xwings.png" />
    
-9. Bezier Curves and Surfaces
-10. Z-Buffer Rendering
+### 7. Bezier Curves and Surfaces
+
+### 8. Z-Buffer Rendering
    
    ![cubism](/../main/images/cubism.gif)
 
    ![cuboid](/../main/images/test8a.png)
    
-11. Lighting and Shading
+### 9. Lighting and Shading
 
     ![3D ball](/../main/images/test9d.png)
 
