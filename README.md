@@ -1,9 +1,11 @@
 # Graphics Portfolio
-#### Created for CS5310: Computer Graphics
-#### All images were created with C code I wrote from scratch.
+Created for CS5310: Computer Graphics
 
-1. What is an Image?
-2. Fractals
+All images were created with C code I wrote from scratch.
+
+### 1. What is an Image?
+       
+### 2. Fractals
    
    ![julia set](/../main/images/juliaset.png)
 
@@ -13,7 +15,7 @@
 
    ![perlin noise](/../main/images/perlin_noise.png)
    
-4. Graphics Primitives
+### 4. Graphics Primitives
 5. Scanline Fill
 6. Transformation and Viewing
 7. Hierarchical Modeling
