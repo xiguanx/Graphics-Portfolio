@@ -28,7 +28,7 @@
 <img src = "/../main/images/perlin_noise.png" />
    
 ### 3. Graphics Primitives
-<p>Lab 4 aimed to build a graphics system. The main tasks involved implementing graphics primitives, including lines, circles, ellipses, and polylines using Bresenham’s algorithms.</p>
+<p>Lab 3 aimed to build a graphics system. The main tasks involved implementing graphics primitives, including lines, circles, ellipses, and polylines using Bresenham’s algorithms.</p>
 <img src = "/../main/images/test3d.png" />
 <p>Rectangles, a cirle and lines.</p>
 <img src = "/../main/images/test3a.png" width = 500 />
@@ -40,15 +40,17 @@
 <img src = "/../main/images/dashline.png" width = 500 />
 
 ### 4. Scanline Fill
+<p>Lab 4 aimed to implement a polygon API and the scanline fill algorithm for polygons. The main tasks involved implementing a subset of the polygon API functions, the scanline fill algorithm for polygons and the barycentric fill algorithm.</p>
 <p>This image was composed of a square and three irregular polygons. Each polygon was constructed with random vertices. All the shapes were filled using a Scanline fill algorithm. </p>
 <p><img src = "/../main/images/test4a.png" />
    <img src = "/../main/images/scanline_fill.gif" /></p>
-<p>This image was filled with a Barycentric fill algorithm.</p>
+<p>This image was filled with a barycentric fill algorithm.</p>
 <img src = "/../main/images/test4b.png" />
 <p>I drew a polygon using a scanline fill algorithm with a gradient color effect. This gradient effect is achieved by linearly interpolating the RGB values of the colors along each scanline, resulting in a smooth transition from the start color to the end color across the polygon.</p>
 <img src = "/../main/images/polygon_gradient.png" width = 500 height = 400/>
 
 ### 5. Transformation and Viewing
+<p>Lab 5 aimed to implement a library of 2-D and 3-D transformations and then make use of them to build an object and a simple imaging pipeline. The main tasks included creating matrix, 2D viewing and perspective viewing structures and functions</p>
 <p>The geometric shapes representing a spaceship were transformed into world coordinates using a series of translation, scaling, and rotation matrices. The shapes were then combined into a spaceship and transformed into the screen's view coordinates. The transformed shapes were then rendered onto the image canvas, filled with colors.</p>
 <img src = "/../main/images/test5a.png" width = 500 />
 <p>50 random lines with specific orientations and frequencies were generated within a square area. Each line was rotated around its endpoint based on its orientation and frequency. The transformed lines were then drawn onto an image matrix. The view matrix was updated to translate across the screen, creating a panning effect.</p>
@@ -57,6 +59,7 @@
 <img src = "/../main/images/cube.gif" />
 
 ### 6. Hierarchical Modeling
+<p>Lab 6 aimed to implement a hierarchical modeling system and build scene graphs using primitives and matrix transforms. The main tasks included creating module structures and drawstate, traversing scene graphs to draw complex scenes.</p>
 <p>This 2D scene is composed of 3 formation modules. Each formation has an X-wing module. X-wings are composed of wing, engine and body modules. Random points were generated to represent stars in the background.</p>
 <img src = "/../main/images/wings.png" />
 <em>Another 2D scene of Penrose triangles</em>
@@ -65,6 +68,7 @@
 <img src = "/../main/images/xwings.png" />
    
 ### 7. Bezier Curves and Surfaces
+<p>Lab 7 aimed to implement Bezier curves and surfaces as part of the hierarchical modeling system. The main tasks included creating Bezier curve and surface structures, adding the structures to the hierarchical modeling system.</p>
 <p>I set up 2 Bezier curves. Each of them had four control points. Three curves of each type were added into the scene graph module.</p>
 <p><img src = "/../main/images/division0.gif" width = 300 />
    <img src = "/../main/images/division2.gif" width = 300 />
@@ -75,17 +79,20 @@
    <img src = "/../main/images/bezSurf-3.gif" width = 300 /></p>
 
 ### 8. Z-Buffer Rendering
-   
-   ![cubism](/../main/images/cubism.gif)
-
-   ![cuboid](/../main/images/test8a.png)
+<p>Lab 8 aimed to implement z-buffer rendering to do hidden surface removal. The main tasks included implementing z-buffer fields of pixel, line and polygon structures, implementing drawing lines using z-buffer and implementing polygon_drawShade.</p>
+<img src = "/../main/images/test8a.png" width = 500 />
+<em>This image demonstrates overlaping. Only the visible surfaces were drawn. </em>
+<img src = "/../main/images/test8b.png" width = 500 />
+<p>I created multiple sets of color-shaded cubes. A single cube module was used to build three differently colored and scaled cubes, which were then combined into a set of cubes. This set was placed into a scene, and multiple instances of this scene were rotated and translated to random positions.</p> 
+<img src = "/../main/images/cubism.gif" />
    
 ### 9. Lighting and Shading
-
-    ![3D ball](/../main/images/test9d.png)
-
-    ![cuboid](/../main/images/test9a.png)
-   
-   ![X wings](/../main/images/test9b.png)
-   
-   ![starfuries](/../main/images/starfuries.png)
+<p>Lab 9 aimed to implement Gouraud shading for polygons with ambient and point light sources. The main tasks include implementing 3D z-buffer rendering with lighting and shading. </p>
+<p>The ambient and point light were added to the lighting model that influenced the shading of the sphere. The Lighting_shading function caculates the proper color given the parameters such as surface normal and view vector.</p>
+<img src = "/../main/images/test9d.png" width = 300 />
+<em>Lighting and Gouraud shading on more complex shapes, a cylinder and a cone</em>
+<img src = "/../main/images/test10d.png" />
+<p>This 3D scene was drawn in Gouraud shading with a point light source.</p>
+<img src = "/../main/images/test9b.png" />
+<p>The starfuries were created by generating a high-resolution PPM image of a 3D scene rendered from a ply model. It set up 3D view and transformation matrices, and applied various lighting effects to illuminate the model. The high-resolution image was resized to 25% using the convert command, and saved as a PNG file.</p>
+<img src = "/../main/images/starfuries.png" />
