@@ -59,10 +59,20 @@
 ### 6. Hierarchical Modeling
 <p>This 2D scene is composed of 3 formation modules. Each formation has an X-wing module. X-wings are composed of wing, engine and body modules. Random points were generated to represent stars in the background.</p>
 <img src = "/../main/images/wings.png" />
+<em>Another 2D scene of Penrose triangles</em>
+<img src = "/../main/images/penrose.png" />
 <p>This 3D scene is composed of 3 body modules. Each body has a wings module. The wings module is composed of 4 wing modules. The wing has engine and laser modules. The structures were built using polygons and cylinders.</p>
 <img src = "/../main/images/xwings.png" />
    
 ### 7. Bezier Curves and Surfaces
+<p>I set up 2 Bezier curves. Each of them had four control points. Three curves of each type were added into the scene graph module.</p>
+<p><img src = "/../main/images/division0.gif" width = 300 />
+   <img src = "/../main/images/division2.gif" width = 300 />
+   <img src = "/../main/images/division4.gif" width = 300 /></p>
+<p>I drew one flat plane and one curved surface using Bezier surfaces. Each surface was added to a scene graph module and drawn.</p>
+<p><img src = "/../main/images/surfdiv0.gif" width = 300 />
+   <img src = "/../main/images/bezSurf-1.gif" width = 300 />
+   <img src = "/../main/images/bezSurf-3.gif" width = 300 /></p>
 
 ### 8. Z-Buffer Rendering
    
